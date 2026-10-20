@@ -1,0 +1,801 @@
+{
+ "commands": {
+  "ADD_FLOAT_LVAR_TO_FLOAT_LVAR": {
+   "cond": false,
+   "id": "005B",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "ADD_VAL_TO_FLOAT_LVAR": {
+   "cond": false,
+   "id": "000B",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "ADD_VAL_TO_INT_LVAR": {
+   "cond": false,
+   "id": "000A",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "CAMERA_PERSIST_FOV": {
+   "cond": false,
+   "id": "0931",
+   "in": [
+    "bool"
+   ],
+   "out": []
+  },
+  "CAMERA_PERSIST_POS": {
+   "cond": false,
+   "id": "0930",
+   "in": [
+    "bool"
+   ],
+   "out": []
+  },
+  "CAMERA_PERSIST_TRACK": {
+   "cond": false,
+   "id": "092F",
+   "in": [
+    "bool"
+   ],
+   "out": []
+  },
+  "CAMERA_RESET_NEW_SCRIPTABLES": {
+   "cond": false,
+   "id": "0925",
+   "in": [],
+   "out": []
+  },
+  "CAMERA_SET_LERP_FOV": {
+   "cond": false,
+   "id": "0922",
+   "in": [
+    "float",
+    "float",
+    "int",
+    "bool"
+   ],
+   "out": []
+  },
+  "CAMERA_SET_VECTOR_MOVE": {
+   "cond": false,
+   "id": "0936",
+   "in": [
+    "float",
+    "float",
+    "float",
+    "float",
+    "float",
+    "float",
+    "int",
+    "bool"
+   ],
+   "out": []
+  },
+  "CAMERA_SET_VECTOR_TRACK": {
+   "cond": false,
+   "id": "0920",
+   "in": [
+    "float",
+    "float",
+    "float",
+    "float",
+    "float",
+    "float",
+    "int",
+    "bool"
+   ],
+   "out": []
+  },
+  "CLEAR_AREA": {
+   "cond": false,
+   "id": "0395",
+   "in": [
+    "float",
+    "float",
+    "float",
+    "float",
+    "bool"
+   ],
+   "out": []
+  },
+  "CLEAR_CHAR_TASKS": {
+   "cond": false,
+   "id": "0687",
+   "in": [
+    "Char"
+   ],
+   "out": []
+  },
+  "COS": {
+   "cond": false,
+   "id": "02F7",
+   "in": [
+    "float"
+   ],
+   "out": [
+    "float"
+   ]
+  },
+  "CREATE_RANDOM_CHAR": {
+   "cond": false,
+   "id": "0376",
+   "in": [
+    "float",
+    "float",
+    "float"
+   ],
+   "out": [
+    "Char"
+   ]
+  },
+  "CSET_LVAR_FLOAT_TO_LVAR_INT": {
+   "cond": false,
+   "id": "0093",
+   "in": [
+    "float",
+    "int"
+   ],
+   "out": []
+  },
+  "DELETE_CHAR": {
+   "cond": false,
+   "id": "009B",
+   "in": [
+    "Char"
+   ],
+   "out": []
+  },
+  "DISPLAY_HUD": {
+   "cond": false,
+   "id": "0826",
+   "in": [
+    "bool"
+   ],
+   "out": []
+  },
+  "DISPLAY_RADAR": {
+   "cond": false,
+   "id": "0581",
+   "in": [
+    "bool"
+   ],
+   "out": []
+  },
+  "DISPLAY_TEXT_WITH_NUMBER": {
+   "cond": false,
+   "id": "045A",
+   "in": [
+    "float",
+    "float",
+    "gxt_key",
+    "int"
+   ],
+   "out": []
+  },
+  "DIV_INT_LVAR_BY_VAL": {
+   "cond": false,
+   "id": "0016",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "DOES_CHAR_EXIST": {
+   "cond": true,
+   "id": "056D",
+   "in": [
+    "any"
+   ],
+   "out": []
+  },
+  "FORCE_WEATHER_NOW": {
+   "cond": false,
+   "id": "01B6",
+   "in": [
+    "WeatherType"
+   ],
+   "out": []
+  },
+  "FREEZE_CHAR_POSITION": {
+   "cond": false,
+   "id": "04D7",
+   "in": [
+    "Char",
+    "bool"
+   ],
+   "out": []
+  },
+  "GET_ACTIVE_CAMERA_COORDINATES": {
+   "cond": false,
+   "id": "068D",
+   "in": [],
+   "out": [
+    "float",
+    "float",
+    "float"
+   ]
+  },
+  "GET_ACTIVE_CAMERA_POINT_AT": {
+   "cond": false,
+   "id": "068E",
+   "in": [],
+   "out": [
+    "float",
+    "float",
+    "float"
+   ]
+  },
+  "GET_GROUND_Z_FOR_3D_COORD": {
+   "cond": false,
+   "id": "02CE",
+   "in": [
+    "float",
+    "float",
+    "float"
+   ],
+   "out": [
+    "float"
+   ]
+  },
+  "GET_HEADING_FROM_VECTOR_2D": {
+   "cond": false,
+   "id": "0604",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": [
+    "float"
+   ]
+  },
+  "GET_PLAYER_CHAR": {
+   "cond": false,
+   "id": "01F5",
+   "in": [
+    "Player"
+   ],
+   "out": [
+    "Char"
+   ]
+  },
+  "GET_TIME_OF_DAY": {
+   "cond": false,
+   "id": "00BF",
+   "in": [],
+   "out": [
+    "int",
+    "int"
+   ]
+  },
+  "GET_TOUCH_POINT_STATE": {
+   "cond": false,
+   "id": "0DE0",
+   "in": [
+    "TouchPoints",
+    "int"
+   ],
+   "out": [
+    "bool"
+   ]
+  },
+  "GOSUB": {
+   "cond": false,
+   "id": "0050",
+   "in": [
+    "label"
+   ],
+   "out": []
+  },
+  "GOTO": {
+   "cond": false,
+   "id": "0002",
+   "in": [
+    "label"
+   ],
+   "out": []
+  },
+  "GOTO_IF_FALSE": {
+   "cond": false,
+   "id": "004D",
+   "in": [
+    "label"
+   ],
+   "out": []
+  },
+  "HAS_ANIMATION_LOADED": {
+   "cond": true,
+   "id": "04EE",
+   "in": [
+    "string"
+   ],
+   "out": []
+  },
+  "IF": {
+   "cond": false,
+   "id": "00D6",
+   "in": [
+    "int"
+   ],
+   "out": []
+  },
+  "IS_CHAR_IN_ANY_CAR": {
+   "cond": true,
+   "id": "00DF",
+   "in": [
+    "Char"
+   ],
+   "out": []
+  },
+  "IS_FLOAT_LVAR_GREATER_THAN_NUMBER": {
+   "cond": true,
+   "id": "0021",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "IS_INT_LVAR_EQUAL_TO_NUMBER": {
+   "cond": true,
+   "id": "0039",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "IS_INT_LVAR_GREATER_OR_EQUAL_TO_NUMBER": {
+   "cond": true,
+   "id": "0029",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "IS_INT_LVAR_GREATER_THAN_INT_LVAR": {
+   "cond": true,
+   "id": "001D",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "IS_INT_LVAR_GREATER_THAN_NUMBER": {
+   "cond": true,
+   "id": "0019",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "IS_NUMBER_GREATER_THAN_FLOAT_LVAR": {
+   "cond": true,
+   "id": "0023",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "IS_NUMBER_GREATER_THAN_INT_LVAR": {
+   "cond": true,
+   "id": "001B",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "IS_PLAYER_CONTROL_ON": {
+   "cond": true,
+   "id": "09E7",
+   "in": [
+    "Player"
+   ],
+   "out": []
+  },
+  "IS_PLAYER_PLAYING": {
+   "cond": true,
+   "id": "0256",
+   "in": [
+    "Player"
+   ],
+   "out": []
+  },
+  "MARK_CHAR_AS_NO_LONGER_NEEDED": {
+   "cond": false,
+   "id": "01C2",
+   "in": [
+    "Char"
+   ],
+   "out": []
+  },
+  "MULT_FLOAT_LVAR_BY_FLOAT_LVAR": {
+   "cond": false,
+   "id": "006B",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "MULT_FLOAT_LVAR_BY_VAL": {
+   "cond": false,
+   "id": "0013",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "NOP": {
+   "cond": false,
+   "id": "0000",
+   "in": [],
+   "out": []
+  },
+  "POINT_CAMERA_AT_POINT": {
+   "cond": false,
+   "id": "0160",
+   "in": [
+    "float",
+    "float",
+    "float",
+    "SwitchType"
+   ],
+   "out": []
+  },
+  "RELEASE_WEATHER": {
+   "cond": false,
+   "id": "01B7",
+   "in": [],
+   "out": []
+  },
+  "REQUEST_ANIMATION": {
+   "cond": false,
+   "id": "04ED",
+   "in": [
+    "string"
+   ],
+   "out": []
+  },
+  "RESTORE_CAMERA_JUMPCUT": {
+   "cond": false,
+   "id": "02EB",
+   "in": [],
+   "out": []
+  },
+  "RETURN": {
+   "cond": false,
+   "id": "0051",
+   "in": [],
+   "out": []
+  },
+  "SCRIPT_NAME": {
+   "cond": false,
+   "id": "03A4",
+   "in": [
+    "string"
+   ],
+   "out": []
+  },
+  "SET_CAMERA_BEHIND_PLAYER": {
+   "cond": false,
+   "id": "0373",
+   "in": [],
+   "out": []
+  },
+  "SET_CAR_DENSITY_MULTIPLIER": {
+   "cond": false,
+   "id": "01EB",
+   "in": [
+    "float"
+   ],
+   "out": []
+  },
+  "SET_CHAR_COORDINATES": {
+   "cond": false,
+   "id": "00A1",
+   "in": [
+    "Char",
+    "float",
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "SET_CHAR_HEADING": {
+   "cond": false,
+   "id": "0173",
+   "in": [
+    "Char",
+    "float"
+   ],
+   "out": []
+  },
+  "SET_CHAR_PROOFS": {
+   "cond": false,
+   "id": "02AB",
+   "in": [
+    "Char",
+    "bool",
+    "bool",
+    "bool",
+    "bool",
+    "bool"
+   ],
+   "out": []
+  },
+  "SET_CHAR_VISIBLE": {
+   "cond": false,
+   "id": "0337",
+   "in": [
+    "Char",
+    "bool"
+   ],
+   "out": []
+  },
+  "SET_EVERYONE_IGNORE_PLAYER": {
+   "cond": false,
+   "id": "03BF",
+   "in": [
+    "Player",
+    "bool"
+   ],
+   "out": []
+  },
+  "SET_FIXED_CAMERA_POSITION": {
+   "cond": false,
+   "id": "015F",
+   "in": [
+    "float",
+    "float",
+    "float",
+    "float",
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "SET_LVAR_FLOAT": {
+   "cond": false,
+   "id": "0007",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "SET_LVAR_FLOAT_TO_LVAR_FLOAT": {
+   "cond": false,
+   "id": "0087",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "SET_LVAR_INT": {
+   "cond": false,
+   "id": "0006",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "SET_LVAR_INT_TO_LVAR_INT": {
+   "cond": false,
+   "id": "0085",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "SET_PED_DENSITY_MULTIPLIER": {
+   "cond": false,
+   "id": "03DE",
+   "in": [
+    "float"
+   ],
+   "out": []
+  },
+  "SET_PLAYER_CONTROL": {
+   "cond": false,
+   "id": "01B4",
+   "in": [
+    "Player",
+    "bool"
+   ],
+   "out": []
+  },
+  "SET_TEXT_CENTRE": {
+   "cond": false,
+   "id": "0342",
+   "in": [
+    "bool"
+   ],
+   "out": []
+  },
+  "SET_TEXT_COLOUR": {
+   "cond": false,
+   "id": "0340",
+   "in": [
+    "int",
+    "int",
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "SET_TEXT_EDGE": {
+   "cond": false,
+   "id": "081C",
+   "in": [
+    "int",
+    "int",
+    "int",
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "SET_TEXT_FONT": {
+   "cond": false,
+   "id": "0349",
+   "in": [
+    "Font"
+   ],
+   "out": []
+  },
+  "SET_TEXT_SCALE": {
+   "cond": false,
+   "id": "033F",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "SET_TIME_OF_DAY": {
+   "cond": false,
+   "id": "00C0",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "SET_TIME_SCALE": {
+   "cond": false,
+   "id": "015D",
+   "in": [
+    "float"
+   ],
+   "out": []
+  },
+  "SIN": {
+   "cond": false,
+   "id": "02F6",
+   "in": [
+    "float"
+   ],
+   "out": [
+    "float"
+   ]
+  },
+  "SUB_FLOAT_LVAR_FROM_FLOAT_LVAR": {
+   "cond": false,
+   "id": "0063",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "SUB_VAL_FROM_FLOAT_LVAR": {
+   "cond": false,
+   "id": "000F",
+   "in": [
+    "float",
+    "float"
+   ],
+   "out": []
+  },
+  "SUB_VAL_FROM_INT_LVAR": {
+   "cond": false,
+   "id": "000E",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "SWITCH_WIDESCREEN": {
+   "cond": false,
+   "id": "02A3",
+   "in": [
+    "bool"
+   ],
+   "out": []
+  },
+  "TASK_GO_STRAIGHT_TO_COORD": {
+   "cond": false,
+   "id": "05D3",
+   "in": [
+    "Char",
+    "float",
+    "float",
+    "float",
+    "MoveState",
+    "int"
+   ],
+   "out": []
+  },
+  "TASK_PLAY_ANIM": {
+   "cond": false,
+   "id": "0605",
+   "in": [
+    "Char",
+    "string",
+    "string",
+    "float",
+    "bool",
+    "bool",
+    "bool",
+    "bool",
+    "int"
+   ],
+   "out": []
+  },
+  "TASK_TURN_CHAR_TO_FACE_CHAR": {
+   "cond": false,
+   "id": "0639",
+   "in": [
+    "Char",
+    "Char"
+   ],
+   "out": []
+  },
+  "TERMINATE_THIS_SCRIPT": {
+   "cond": false,
+   "id": "004E",
+   "in": [],
+   "out": []
+  },
+  "USE_TEXT_COMMANDS": {
+   "cond": false,
+   "id": "03F0",
+   "in": [
+    "bool"
+   ],
+   "out": []
+  },
+  "WAIT": {
+   "cond": false,
+   "id": "0001",
+   "in": [
+    "int"
+   ],
+   "out": []
+  }
+ },
+ "source": "sannybuilder/library sa_mobile.json v0.517"
+}
