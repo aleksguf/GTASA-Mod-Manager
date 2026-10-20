@@ -36,10 +36,16 @@ jobs:
       - name: Build CLEO scripts
         run: |
           mkdir -p out
-          python3 tools/scm_asm.py mods/director/director.txt out/director.csi
-          python3 tools/scm_asm.py mods/director/director.txt out/director.csa -D CSA
-          cmp out/director.csi mods/director/build/director.csi
-          cmp out/director.csa mods/director/build/director.csa
+          for lang in en ru; do
+            suffix=$([ $lang = ru ] && echo _ru || true)
+            python3 mods/director/gen_director.py $lang > out/director$suffix.txt
+            cmp out/director$suffix.txt mods/director/director$suffix.txt
+            python3 tools/scm_asm.py out/director$suffix.txt out/director$suffix.csi
+            python3 tools/scm_asm.py out/director$suffix.txt out/director$suffix.csa -D CSA
+            cmp out/director$suffix.csi mods/director/build/director$suffix.csi
+            cmp out/director$suffix.csa mods/director/build/director$suffix.csa
+          done
+          rm out/*.txt
           cp mods/director/README.md out/
       - uses: actions/upload-artifact@v4
         with:

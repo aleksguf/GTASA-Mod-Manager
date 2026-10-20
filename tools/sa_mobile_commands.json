@@ -9,6 +9,24 @@
    ],
    "out": []
   },
+  "ADD_INT_LVAR_TO_INT_LVAR": {
+   "cond": false,
+   "id": "005A",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "ADD_TEXT_LABEL": {
+   "cond": false,
+   "id": "0ADF",
+   "in": [
+    "string",
+    "string"
+   ],
+   "out": []
+  },
   "ADD_VAL_TO_FLOAT_LVAR": {
    "cond": false,
    "id": "000B",
@@ -26,6 +44,16 @@
     "int"
    ],
    "out": []
+  },
+  "ALLOCATE_MEMORY": {
+   "cond": false,
+   "id": "0AC8",
+   "in": [
+    "int"
+   ],
+   "out": [
+    "int"
+   ]
   },
   "CAMERA_PERSIST_FOV": {
    "cond": false,
@@ -128,6 +156,20 @@
     "float"
    ]
   },
+  "CREATE_CHAR": {
+   "cond": false,
+   "id": "009A",
+   "in": [
+    "PedType",
+    "model_char",
+    "float",
+    "float",
+    "float"
+   ],
+   "out": [
+    "Char"
+   ]
+  },
   "CREATE_RANDOM_CHAR": {
    "cond": false,
    "id": "0376",
@@ -173,6 +215,28 @@
    ],
    "out": []
   },
+  "DISPLAY_TEXT": {
+   "cond": false,
+   "id": "033E",
+   "in": [
+    "float",
+    "float",
+    "gxt_key"
+   ],
+   "out": []
+  },
+  "DISPLAY_TEXT_WITH_2_NUMBERS": {
+   "cond": false,
+   "id": "045B",
+   "in": [
+    "float",
+    "float",
+    "gxt_key",
+    "int",
+    "int"
+   ],
+   "out": []
+  },
   "DISPLAY_TEXT_WITH_NUMBER": {
    "cond": false,
    "id": "045A",
@@ -201,6 +265,21 @@
    ],
    "out": []
   },
+  "DRAW_RECT": {
+   "cond": false,
+   "id": "038E",
+   "in": [
+    "float",
+    "float",
+    "float",
+    "float",
+    "int",
+    "int",
+    "int",
+    "int"
+   ],
+   "out": []
+  },
   "FORCE_WEATHER_NOW": {
    "cond": false,
    "id": "01B6",
@@ -215,6 +294,14 @@
    "in": [
     "Char",
     "bool"
+   ],
+   "out": []
+  },
+  "FREE_MEMORY": {
+   "cond": false,
+   "id": "0AC9",
+   "in": [
+    "int"
    ],
    "out": []
   },
@@ -324,6 +411,14 @@
    ],
    "out": []
   },
+  "HAS_MODEL_LOADED": {
+   "cond": true,
+   "id": "0248",
+   "in": [
+    "model_any"
+   ],
+   "out": []
+  },
   "IF": {
    "cond": false,
    "id": "00D6",
@@ -352,6 +447,15 @@
   "IS_INT_LVAR_EQUAL_TO_NUMBER": {
    "cond": true,
    "id": "0039",
+   "in": [
+    "int",
+    "int"
+   ],
+   "out": []
+  },
+  "IS_INT_LVAR_GREATER_OR_EQUAL_TO_INT_LVAR": {
+   "cond": true,
+   "id": "002D",
    "in": [
     "int",
     "int"
@@ -427,6 +531,14 @@
    ],
    "out": []
   },
+  "MARK_MODEL_AS_NO_LONGER_NEEDED": {
+   "cond": false,
+   "id": "0249",
+   "in": [
+    "model_any"
+   ],
+   "out": []
+  },
   "MULT_FLOAT_LVAR_BY_FLOAT_LVAR": {
    "cond": false,
    "id": "006B",
@@ -442,6 +554,15 @@
    "in": [
     "float",
     "float"
+   ],
+   "out": []
+  },
+  "MULT_INT_LVAR_BY_VAL": {
+   "cond": false,
+   "id": "0012",
+   "in": [
+    "int",
+    "int"
    ],
    "out": []
   },
@@ -462,6 +583,19 @@
    ],
    "out": []
   },
+  "READ_MEMORY": {
+   "cond": false,
+   "id": "0DD8",
+   "in": [
+    "int",
+    "int",
+    "bool"
+   ],
+   "out": [
+    "any"
+   ],
+   "out_first": true
+  },
   "RELEASE_WEATHER": {
    "cond": false,
    "id": "01B7",
@@ -473,6 +607,14 @@
    "id": "04ED",
    "in": [
     "string"
+   ],
+   "out": []
+  },
+  "REQUEST_MODEL": {
+   "cond": false,
+   "id": "0247",
+   "in": [
+    "model_any"
    ],
    "out": []
   },
@@ -666,6 +808,14 @@
    ],
    "out": []
   },
+  "SET_TEXT_PROPORTIONAL": {
+   "cond": false,
+   "id": "0348",
+   "in": [
+    "bool"
+   ],
+   "out": []
+  },
   "SET_TEXT_SCALE": {
    "cond": false,
    "id": "033F",
@@ -708,6 +858,15 @@
    "in": [
     "float",
     "float"
+   ],
+   "out": []
+  },
+  "SUB_INT_LVAR_FROM_INT_LVAR": {
+   "cond": false,
+   "id": "0062",
+   "in": [
+    "int",
+    "int"
    ],
    "out": []
   },
@@ -775,6 +934,17 @@
    ],
    "out": []
   },
+  "TASK_TURN_CHAR_TO_FACE_COORD": {
+   "cond": false,
+   "id": "06BA",
+   "in": [
+    "Char",
+    "float",
+    "float",
+    "float"
+   ],
+   "out": []
+  },
   "TERMINATE_THIS_SCRIPT": {
    "cond": false,
    "id": "004E",
@@ -794,6 +964,18 @@
    "id": "0001",
    "in": [
     "int"
+   ],
+   "out": []
+  },
+  "WRITE_MEMORY": {
+   "cond": false,
+   "id": "0DD9",
+   "in": [
+    "int",
+    "any",
+    "int",
+    "bool",
+    "bool"
    ],
    "out": []
   }

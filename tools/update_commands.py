@@ -15,9 +15,18 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # CLEO Android reads the result variable of these opcodes BEFORE the inputs
-# (checked in libcleo.so: 0DE0 = var, 2 ints; 0DE1 = var, 4 ints; ...),
-# unlike the input-then-output order of the library description.
-OUTPUT_FIRST = {"0DE0", "0DE1", "0DE2", "0DE3"}
+# (checked in libcleo.so: 0DE0 = var, 2 ints; 0DE1 = var, 4 ints;
+# 0DD8 = var, 3 ints; ...), unlike the input-then-output order of the
+# library description.
+OUTPUT_FIRST = {"0DE0", "0DE1", "0DE2", "0DE3", "0DD8"}
+
+# Opcodes added by CLEO Mod for AML 2.0.1.5 (AndroidModLoader/GTA_CLEOMod,
+# cleo4opcodes.cpp), missing from the sa_mobile library.
+EXTRA = {
+    "ADD_TEXT_LABEL": {"id": "0ADF", "in": ["string", "string"], "out": [], "cond": False},
+    "ALLOCATE_MEMORY": {"id": "0AC8", "in": ["int"], "out": ["int"], "cond": False},
+    "FREE_MEMORY": {"id": "0AC9", "in": ["int"], "out": [], "cond": False},
+}
 
 
 def main(argv):
@@ -42,6 +51,7 @@ def main(argv):
             }
             if c["id"] in OUTPUT_FIRST:
                 all_cmds[c["name"]]["out_first"] = True
+    all_cmds.update(EXTRA)
     used = set()
     for path in argv[1:]:
         with open(path, encoding="utf-8") as f:

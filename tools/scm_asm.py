@@ -158,7 +158,8 @@ def encode_arg(token, ptype, is_output, labels, lineno):
         if ptype in STRING_TYPES:
             raise AsmError("line %d: int given for string parameter" % lineno)
         return encode_int(int(token))
-    text = token[1:-1].encode("ascii")
+    # cp1251 lets Russian text reach the game font (SanLTD localisation)
+    text = token[1:-1].encode("cp1251")
     if ptype not in STRING_TYPES and ptype != "any":
         raise AsmError("line %d: string given for %s parameter" % (lineno, ptype))
     if token[0] == "'":
@@ -255,7 +256,7 @@ def main(argv):
     if len(files) != 2:
         print(__doc__)
         return 2
-    with open(files[0], encoding="utf-8") as f:
+    with open(files[0], encoding="utf-8") as f:  # strings -> cp1251
         lines = f.read().splitlines()
     try:
         code = assemble(lines, defines)
