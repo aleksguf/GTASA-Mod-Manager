@@ -14,6 +14,11 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
+# CLEO Android reads the result variable of these opcodes BEFORE the inputs
+# (checked in libcleo.so: 0DE0 = var, 2 ints; 0DE1 = var, 4 ints; ...),
+# unlike the input-then-output order of the library description.
+OUTPUT_FIRST = {"0DE0", "0DE1", "0DE2", "0DE3"}
+
 
 def main(argv):
     if len(argv) < 2:
@@ -35,6 +40,8 @@ def main(argv):
                 "out": [p["type"] for p in c.get("output", [])],
                 "cond": bool(attrs.get("is_condition")),
             }
+            if c["id"] in OUTPUT_FIRST:
+                all_cmds[c["name"]]["out_first"] = True
     used = set()
     for path in argv[1:]:
         with open(path, encoding="utf-8") as f:

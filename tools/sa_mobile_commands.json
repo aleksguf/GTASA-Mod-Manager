@@ -289,7 +289,8 @@
    ],
    "out": [
     "bool"
-   ]
+   ],
+   "out_first": true
   },
   "GOSUB": {
    "cond": false,

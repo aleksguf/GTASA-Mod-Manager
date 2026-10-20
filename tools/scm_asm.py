@@ -3,7 +3,9 @@
 
 Compiles a small text language into a CLEO custom script (.csa / .csi).
 Opcodes and parameter lists come from tools/sa_mobile_commands.json
-(taken from the Sanny Builder library, sa_mobile edition).
+(taken from the Sanny Builder library, sa_mobile edition). Arguments are
+written in bytecode order; for commands marked "out_first" (CLEO touch
+opcodes) the result variable comes first: GET_TOUCH_POINT_STATE 12@ 5 0
 
 Source syntax (one instruction per line):
     // comment                  comment (also allowed at end of line)
@@ -201,6 +203,8 @@ def assemble(lines, defines=()):
             if negate and not cmd["cond"]:
                 raise AsmError("line %d: NOT used on non-condition %s" % (lineno, cmd["name"]))
             params = [(t, False) for t in cmd["in"]] + [(t, True) for t in cmd["out"]]
+            if cmd.get("out_first"):
+                params = params[len(cmd["in"]):] + params[:len(cmd["in"])]
             if "arguments" in cmd["in"]:
                 raise AsmError("line %d: variadic commands are not supported" % lineno)
             if len(args) != len(params):
